@@ -1,0 +1,87 @@
+---
+interface Project {
+  name: string;
+  role: string;
+  period: string;
+  description: string;
+  tech: string[];
+  link: string | null;
+  linkLabel: string | null;
+  badge: string | null;
+}
+
+const projects: Project[] = [
+  {
+    name: 'DAG Profiler',
+    role: 'Lead Developer',
+    period: 'Oct 2025 — Mar 2026',
+    description:
+      'Published an open-source Python library for profiling Directed Acyclic Graph execution to identify scheduling bottlenecks across distributed computational workflows — addressing a gap in observability tooling for DAG-based O-RAN applications.',
+    tech: ['Python', 'DAG', 'PyPI', 'Profiling', 'Open Source'],
+    link: 'https://pypi.org/project/dagprofiler/',
+    linkLabel: 'PyPI →',
+    badge: 'Published',
+  },
+  {
+    name: 'Log Analyzer',
+    role: 'Architect',
+    period: 'Aug 2025 — Nov 2025',
+    description:
+      'Architected a scalable observability platform integrating a Go HTTP endpoint, a Python/Celery task queue over RabbitMQ, and a Next.js dashboard with JWT-based auth — designed to reduce MTTR by centralizing log ingestion and triage across distributed services.',
+    tech: ['Go', 'Python', 'Celery', 'RabbitMQ', 'Next.js', 'JWT', 'REST'],
+    link: null,
+    linkLabel: null,
+    badge: null,
+  },
+];
+---
+
+<section id="projects" class="py-14 px-6 border-t border-zinc-800/50">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-xs font-mono text-zinc-600 uppercase tracking-widest mb-8">
+      Selected Projects
+    </h2>
+    <div class="space-y-4">
+      {
+        projects.map((project) => (
+          <div class="p-5 rounded-xl border border-zinc-800/70 bg-zinc-900/30 hover:border-zinc-700 transition-colors">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-medium text-zinc-100">{project.name}</span>
+                <span class="text-xs text-zinc-600">· {project.role}</span>
+                {project.badge && (
+                  <span class="text-xs px-2 py-0.5 bg-emerald-950/60 text-emerald-400 border border-emerald-800/50 rounded-full font-mono">
+                    {project.badge}
+                  </span>
+                )}
+              </div>
+              <span class="font-mono text-xs text-zinc-600 shrink-0">{project.period}</span>
+            </div>
+
+            <p class="text-sm text-zinc-400 leading-relaxed mb-4">{project.description}</p>
+
+            <div class="flex items-center justify-between gap-4 flex-wrap">
+              <div class="flex flex-wrap gap-1.5">
+                {project.tech.map((tag) => (
+                  <span class="text-xs px-2 py-0.5 bg-zinc-800/60 text-zinc-400 rounded font-mono border border-zinc-700/40">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs text-sky-400 hover:text-sky-300 transition-colors shrink-0 font-mono"
+                >
+                  {project.linkLabel}
+                </a>
+              )}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

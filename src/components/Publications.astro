@@ -1,0 +1,40 @@
+---
+const publications = [
+  {
+    authors: 'Yoonjae H.',
+    year: '2026',
+    title:
+      'Profiling and Scheduling Complex O-RAN Applications Across the 5G Edge and Cloud',
+    venue: 'ICCCN 2026',
+    status: 'Accepted',
+    doi: null as string | null,
+  },
+];
+---
+
+<section id="publications" class="py-14 px-6 border-t border-zinc-800/50">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-xs font-mono text-zinc-600 uppercase tracking-widest mb-8">Publications</h2>
+    <div class="space-y-4">
+      {
+        publications.map((pub) => (
+          <div class="p-5 rounded-xl border border-zinc-800/70 bg-zinc-900/30">
+            <div class="flex items-start gap-3">
+              <span class="mt-0.5 shrink-0 text-xs px-2 py-0.5 bg-sky-950/60 text-sky-400 border border-sky-800/50 rounded font-mono">
+                {pub.status}
+              </span>
+              <div>
+                <p class="text-zinc-100 font-medium leading-snug mb-2">{pub.title}</p>
+                <p class="text-sm text-zinc-500 font-mono">
+                  {pub.authors} &nbsp;&middot;&nbsp;
+                  <span class="text-zinc-400">{pub.venue}</span>
+                  &nbsp;&middot;&nbsp; {pub.year}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
