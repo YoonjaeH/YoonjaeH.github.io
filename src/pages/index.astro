@@ -3,24 +3,27 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
 import Education from '../components/Education.astro';
+import Flow from '../components/Flow.astro';
 import ResearchInterests from '../components/ResearchInterests.astro';
-import Experience from '../components/Experience.astro';
-import Projects from '../components/Projects.astro';
-import Publications from '../components/Publications.astro';
 import Skills from '../components/Skills.astro';
+import Response from '../components/Response.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
   <Nav />
-  <main>
-    <Hero />
-    <Education />
-    <ResearchInterests />
-    <Experience />
-    <Projects />
-    <Publications />
-    <Skills />
+  <main class="wrap">
+    <div class="diagram lanes">
+      <span class="lifeline lifeline--industry" aria-hidden="true"></span>
+      <span class="lifeline lifeline--self" aria-hidden="true"></span>
+      <span class="lifeline lifeline--research" aria-hidden="true"></span>
+      <Hero />
+      <Flow />
+      <ResearchInterests />
+      <Education />
+      <Skills />
+      <Response />
+    </div>
   </main>
   <Footer />
 </Layout>

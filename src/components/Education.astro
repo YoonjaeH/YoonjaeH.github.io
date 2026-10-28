@@ -15,23 +15,19 @@ const schools = [
 ];
 ---
 
-<section class="py-14 px-6 border-t border-zinc-800/50">
-  <div class="max-w-3xl mx-auto">
-    <h2 class="text-xs font-mono text-zinc-600 uppercase tracking-widest mb-8">Education</h2>
-    <div class="space-y-5">
-      {
-        schools.map((school) => (
-          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
-            <div>
-              <div class="text-zinc-200 font-medium">{school.institution}</div>
-              <div class="text-sm text-zinc-500 mt-0.5">{school.degree}</div>
-            </div>
-            <div class="font-mono text-xs text-zinc-600 shrink-0 sm:text-right pt-0.5">
-              {school.period}
-            </div>
+<section class="pre note" id="education" aria-labelledby="education-title">
+  <h2 id="education-title">Education</h2>
+  <ul>
+    {
+      schools.map((school) => (
+        <li>
+          <div class="pre__school">{school.institution}</div>
+          <div class="pre__degree">{school.degree}</div>
+          <div class="pre__when num">
+            {school.period} · {school.location}
           </div>
-        ))
-      }
-    </div>
-  </div>
+        </li>
+      ))
+    }
+  </ul>
 </section>

@@ -1,35 +1,41 @@
 ---
 const navLinks = [
-  { label: 'Research', href: '#research' },
   { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Publications', href: '#publications' },
+  { label: 'Projects', href: '#log-analyzer' },
+  { label: 'Publications', href: '#icccn' },
+  { label: 'Skills', href: '#skills' },
+];
+
+const participants = [
+  { lane: 'industry', label: 'Industry', href: '#samsung' },
+  { lane: 'self', label: 'Yoonjae Hwang', href: '#top' },
+  { lane: 'research', label: 'Research', href: '#sim2real' },
 ];
 ---
 
-<header
-  class="fixed top-0 inset-x-0 z-50 border-b border-zinc-800/50 bg-[#080808]/85 backdrop-blur-sm"
->
-  <nav class="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
-    <a
-      href="#"
-      class="font-mono text-xs text-zinc-500 hover:text-zinc-300 transition-colors tracking-wide"
-    >
-      yoonjae@usc.edu
-    </a>
-    <ul class="flex items-center gap-0.5">
+<header class="site-header">
+  <div class="wrap">
+    <div class="site-header__bar">
+      <a href="#top" class="site-header__home">Yoonjae Hwang</a>
+      <nav class="site-header__nav" aria-label="Sections">
+        {navLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+        <a
+          href="/Yoonjae_Hwang_CV.pdf"
+          download="Yoonjae_Hwang_CV.pdf"
+          class="btn btn--primary btn--sm"
+        >
+          Download CV
+        </a>
+      </nav>
+    </div>
+    <div class="participants lanes" aria-label="Lifelines">
       {
-        navLinks.map((link) => (
-          <li>
-            <a
-              href={link.href}
-              class="px-3 py-1.5 text-xs text-zinc-500 hover:text-zinc-200 hover:bg-zinc-800/60 rounded-md transition-colors"
-            >
-              {link.label}
-            </a>
-          </li>
+        participants.map((p) => (
+          <a href={p.href} class="participant" data-lane={p.lane}>
+            {p.label}
+          </a>
         ))
       }
-    </ul>
-  </nav>
+    </div>
+  </div>
 </header>

@@ -1,0 +1,125 @@
+---
+import { messages, laneName, statusName } from '../data/flow';
+
+const isProof = (status?: string) => status === 'accepted' || status === 'published';
+---
+
+<div class="span-head" id="experience">
+  <h2>Experience</h2>
+  <p>Industry to the left, research to the right, projects loop back. Time runs down.</p>
+</div>
+
+{
+  messages.map((m, i) => (
+    <article
+      id={m.id}
+      class:list={[
+        'msg',
+        `msg--${m.lane}`,
+        { 'is-proof': isProof(m.status), 'msg--pub': m.role === 'Publication' },
+      ]}
+      data-lane={m.lane}
+      data-status={m.status}
+    >
+      <header class="msg__label">
+        <span class="msg__n num">{i + 1}.</span>
+        <h3 class="msg__org">{m.org}</h3>
+        <span class="msg__when num" aria-hidden="true">{m.period}</span>
+        <p class="msg__role">
+          <span class="sr-only">{laneName[m.lane]}:</span>
+          <span>{m.role}</span>
+          {m.status && <span class={`stamp stamp--${m.status}`}>{statusName[m.status]}</span>}
+        </p>
+      </header>
+
+      <div class="msg__caption">
+        <p class="msg__period num">{m.period}</p>
+      </div>
+
+      <div class="msg__arrow" aria-hidden="true">
+        <span class="msg__recv">{laneName[m.lane]}</span>
+      </div>
+      <div class="msg__act" aria-hidden="true" />
+
+      <div class="msg__detail">
+        {m.bullets && (
+          <ul>
+            {m.bullets.map((b) => (
+              <li>{b}</li>
+            ))}
+          </ul>
+        )}
+        {m.description && <p>{m.description}</p>}
+        {m.venue && (
+          <p class="msg__cite">
+            {m.authors} · <strong>{m.venue}</strong> · <span class="num">{m.year}</span>
+          </p>
+        )}
+        {m.tech && (
+          <ul class="tags" aria-label="Technologies">
+            {m.tech.map((t) => (
+              <li class="tag">{t}</li>
+            ))}
+          </ul>
+        )}
+        {m.link && (
+          <a class="msg__link" href={m.link.href} target="_blank" rel="noopener noreferrer">
+            {m.link.label}
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8" />
+            </svg>
+          </a>
+        )}
+      </div>
+    </article>
+  ))
+}
+
+<script>
+  const msgs = document.querySelectorAll<HTMLElement>('.msg');
+  const participants = document.querySelectorAll<HTMLElement>('.site-header .participant');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Draw each arrow once, the first time its message is in view.
+  const sent = new IntersectionObserver(
+    (entries) => {
+      let delay = 0;
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        const el = e.target as HTMLElement;
+        if (reduce) el.classList.add('is-sent');
+        else {
+          setTimeout(() => el.classList.add('is-sent'), delay);
+          delay += 140;
+        }
+        sent.unobserve(el);
+      }
+    },
+    { rootMargin: '0px 0px -18% 0px', threshold: 0 }
+  );
+  msgs.forEach((m) => sent.observe(m));
+
+  // Light the participant that receives the message at the centre of the screen.
+  const setActive = (lane: string | null) => {
+    participants.forEach((p) => p.classList.toggle('is-active', p.dataset.lane === lane));
+  };
+  const active = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) setActive((e.target as HTMLElement).dataset.lane ?? null);
+      }
+    },
+    { rootMargin: '-45% 0px -45% 0px' }
+  );
+  msgs.forEach((m) => active.observe(m));
+
+  const hero = document.getElementById('top');
+  if (hero) {
+    new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) setActive(null);
+      },
+      { rootMargin: '-45% 0px -45% 0px' }
+    ).observe(hero);
+  }
+</script>

@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T00:00:00Z",
+  "title": "Design System: Yoonjae Hwang",
+  "extensions": {
+    "colorMeta": {
+      "signal": {
+        "role": "primary",
+        "displayName": "Signal Blue",
+        "canonical": "#0b57d0",
+        "tonalRamp": [
+          "#061a3d",
+          "#082c6b",
+          "#0842a0",
+          "#0b57d0",
+          "#3f7ae0",
+          "#7ca3ea",
+          "#b9cdf4",
+          "#e8effc"
+        ]
+      },
+      "signal-deep": {
+        "role": "primary",
+        "displayName": "Deep Signal",
+        "canonical": "#0842a0",
+        "tonalRamp": [
+          "#061a3d",
+          "#082c6b",
+          "#0842a0",
+          "#0b57d0",
+          "#3f7ae0",
+          "#7ca3ea",
+          "#b9cdf4",
+          "#e8effc"
+        ]
+      },
+      "signal-wash": {
+        "role": "primary",
+        "displayName": "Signal Wash",
+        "canonical": "#e8effc",
+        "tonalRamp": [
+          "#061a3d",
+          "#082c6b",
+          "#0842a0",
+          "#0b57d0",
+          "#3f7ae0",
+          "#7ca3ea",
+          "#b9cdf4",
+          "#e8effc"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Spec Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#111318",
+          "#262a31",
+          "#434955",
+          "#636a76",
+          "#8d939d",
+          "#c4cad3",
+          "#e1e5ea",
+          "#f2f5f9"
+        ]
+      },
+      "wash": {
+        "role": "neutral",
+        "displayName": "Note Wash",
+        "canonical": "#f2f5f9",
+        "tonalRamp": [
+          "#111318",
+          "#262a31",
+          "#434955",
+          "#636a76",
+          "#8d939d",
+          "#c4cad3",
+          "#e1e5ea",
+          "#f2f5f9"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Drafting Ink",
+        "canonical": "#111318",
+        "tonalRamp": [
+          "#111318",
+          "#262a31",
+          "#434955",
+          "#636a76",
+          "#8d939d",
+          "#c4cad3",
+          "#e1e5ea",
+          "#f2f5f9"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Second Ink",
+        "canonical": "#434955",
+        "tonalRamp": [
+          "#111318",
+          "#262a31",
+          "#434955",
+          "#636a76",
+          "#8d939d",
+          "#c4cad3",
+          "#e1e5ea",
+          "#f2f5f9"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Third Ink",
+        "canonical": "#636a76",
+        "tonalRamp": [
+          "#111318",
+          "#262a31",
+          "#434955",
+          "#636a76",
+          "#8d939d",
+          "#c4cad3",
+          "#e1e5ea",
+          "#f2f5f9"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Lifeline Grey",
+        "canonical": "#c4cad3",
+        "tonalRamp": [
+          "#111318",
+          "#262a31",
+          "#434955",
+          "#636a76",
+          "#8d939d",
+          "#c4cad3",
+          "#e1e5ea",
+          "#f2f5f9"
+        ]
+      },
+      "rule-soft": {
+        "role": "neutral",
+        "displayName": "Soft Rule",
+        "canonical": "#e1e5ea",
+        "tonalRamp": [
+          "#111318",
+          "#262a31",
+          "#434955",
+          "#636a76",
+          "#8d939d",
+          "#c4cad3",
+          "#e1e5ea",
+          "#f2f5f9"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name in the hero note only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Response block heading."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Span-head section headings crossing all lifelines."
+      },
+      "message": {
+        "displayName": "Message",
+        "purpose": "Organisation names on message labels."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Base copy and hero summary."
+      },
+      "body-detail": {
+        "displayName": "Body detail",
+        "purpose": "Message bullets and descriptions, max 70ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Participant boxes and lane names, uppercase condensed."
+      },
+      "stamp": {
+        "displayName": "Stamp",
+        "purpose": "CURRENT / ACCEPTED / PUBLISHED status stamps only."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Single easing for all state and draw transitions."
+      },
+      {
+        "name": "arrow-draw",
+        "value": "transform 700ms var(--ease-out)",
+        "purpose": "Message arrow stroke draws from the centre lifeline as it enters view; static under reduced motion."
+      },
+      {
+        "name": "arrowhead-reveal",
+        "value": "opacity 200ms ease-out 520ms",
+        "purpose": "Arrowhead appears as the stroke completes."
+      },
+      {
+        "name": "control-color",
+        "value": "160ms var(--ease-out)",
+        "purpose": "Button background, colour and border transitions."
+      },
+      {
+        "name": "participant-light",
+        "value": "240ms var(--ease-out)",
+        "purpose": "Header participant fills as its message is in view."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stack",
+        "value": "960px",
+        "purpose": "Hero stacks; edge 5.5rem."
+      },
+      {
+        "name": "single-lifeline",
+        "value": "760px",
+        "purpose": "One lifeline, gutter 1rem, edge 1.75rem, header participants hidden."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Download CV only; square signal-blue fill.",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\"><svg fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" stroke-width=\"2\" aria-hidden=\"true\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3\"/></svg>Download CV</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:.5rem;height:2.75rem;padding-inline:1.125rem;border:1px solid var(--ink,#111318);font-family:Archivo,ui-sans-serif,system-ui,sans-serif;font-size:.9375rem;font-weight:600;font-variation-settings:'wdth' 92;text-decoration:none;white-space:nowrap;transition:background-color 160ms cubic-bezier(.16,1,.3,1),color 160ms cubic-bezier(.16,1,.3,1),border-color 160ms cubic-bezier(.16,1,.3,1)}.ds-btn svg{width:1rem;height:1rem}.ds-btn-primary{background:var(--signal,#0b57d0);border-color:var(--signal,#0b57d0);color:#fff}.ds-btn-primary:hover{background:var(--signal-deep,#0842a0);border-color:var(--signal-deep,#0842a0)}.ds-btn:focus-visible{outline:2px solid var(--signal,#0b57d0);outline-offset:3px}"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Secondary routes (GitHub, email); inverts to ink on hover.",
+      "html": "<a class=\"ds-btn-q\" href=\"#\">GitHub</a>",
+      "css": ".ds-btn-q{display:inline-flex;align-items:center;height:2.75rem;padding-inline:1.125rem;border:1px solid var(--ink,#111318);background:var(--paper,#fff);color:var(--ink,#111318);font-family:Archivo,ui-sans-serif,system-ui,sans-serif;font-size:.9375rem;font-weight:600;font-variation-settings:'wdth' 92;text-decoration:none;transition:background-color 160ms cubic-bezier(.16,1,.3,1),color 160ms cubic-bezier(.16,1,.3,1)}.ds-btn-q:hover{background:var(--ink,#111318);color:var(--paper,#fff)}.ds-btn-q:focus-visible{outline:2px solid var(--signal,#0b57d0);outline-offset:3px}"
+    },
+    {
+      "name": "Participant Box",
+      "kind": "nav",
+      "refersTo": "participant",
+      "description": "Lifeline head in the sticky header; fills ink while its message is in view.",
+      "html": "<div class=\"ds-parts\"><a class=\"ds-part\" href=\"#\">Industry</a><a class=\"ds-part is-active\" href=\"#\">Yoonjae Hwang</a><a class=\"ds-part\" href=\"#\">Research</a></div>",
+      "css": ".ds-parts{display:flex;justify-content:space-between;gap:1rem}.ds-part{min-width:6.5rem;padding:.25rem .625rem;border:1px solid var(--ink,#111318);background:var(--paper,#fff);color:var(--ink,#111318);text-align:center;font-family:Archivo,ui-sans-serif,system-ui,sans-serif;font-size:.75rem;font-weight:650;font-variation-settings:'wdth' 78;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:background-color 240ms cubic-bezier(.16,1,.3,1),color 240ms cubic-bezier(.16,1,.3,1)}.ds-part:hover{background:var(--wash,#f2f5f9)}.ds-part.is-active{background:var(--ink,#111318);color:var(--paper,#fff)}.ds-part:focus-visible{outline:2px solid var(--signal,#0b57d0);outline-offset:3px}"
+    },
+    {
+      "name": "Note Box",
+      "kind": "card",
+      "refersTo": "note",
+      "description": "Dog-eared wash note holding hero, education, interests and skills.",
+      "html": "<section class=\"ds-note\"><h2>Research Interests</h2><p>Distributed systems, multi-agent robotics.</p></section>",
+      "css": ".ds-note{position:relative;padding:1.5rem 1.75rem;background:var(--wash,#f2f5f9);border:1px solid var(--ink,#111318);clip-path:polygon(0 0,calc(100% - 1.25rem) 0,100% 1.25rem,100% 100%,0 100%);font-family:Archivo,ui-sans-serif,system-ui,sans-serif;color:var(--ink,#111318)}.ds-note::after{content:'';position:absolute;top:-1px;right:-1px;width:1.25rem;height:1.25rem;background:linear-gradient(to bottom left,transparent calc(50% - .5px),var(--ink,#111318) calc(50% - .5px),var(--ink,#111318) calc(50% + .5px),var(--rule,#c4cad3) calc(50% + .5px))}.ds-note h2{font-size:1rem;font-weight:700;margin:0 0 .875rem}.ds-note p{margin:0;color:var(--ink-2,#434955)}"
+    },
+    {
+      "name": "Message",
+      "kind": "custom",
+      "refersTo": "message",
+      "description": "Numbered message with a solid arrow and filled head to its lane; proof messages turn blue.",
+      "html": "<article class=\"ds-msg\"><header><span class=\"ds-msg-n\">9.</span><h3>ICCCN 2026</h3></header><div class=\"ds-msg-arrow\"></div><p>Profiling and Scheduling Complex O-RAN Applications Across the 5G Edge and Cloud.</p></article><article class=\"ds-msg is-proof\"><header><span class=\"ds-msg-n\">10.</span><h3>dagprofiler</h3></header><div class=\"ds-msg-arrow\"></div></article>",
+      "css": ".ds-msg{font-family:Archivo,ui-sans-serif,system-ui,sans-serif;margin-bottom:2rem;max-width:36rem}.ds-msg header{display:flex;gap:.75rem;align-items:baseline;padding-bottom:.625rem}.ds-msg-n{font-size:.9375rem;font-weight:600;color:var(--ink-3,#636a76);font-variant-numeric:tabular-nums}.ds-msg h3{margin:0;font-size:1.375rem;line-height:1.2;font-weight:680;font-variation-settings:'wdth' 84;letter-spacing:-.01em}.ds-msg-arrow{position:relative;height:9px}.ds-msg-arrow::before{content:'';position:absolute;top:4px;left:0;right:9px;height:1px;background:var(--ink,#111318)}.ds-msg-arrow::after{content:'';position:absolute;top:0;right:0;border-block:4.5px solid transparent;border-left:9px solid var(--ink,#111318)}.ds-msg.is-proof .ds-msg-arrow::before{background:var(--signal,#0b57d0)}.ds-msg.is-proof .ds-msg-arrow::after{border-left-color:var(--signal,#0b57d0)}.ds-msg p{margin:1rem 0 0;font-size:.9375rem;line-height:1.6;color:var(--ink-2,#434955);max-width:70ch}"
+    },
+    {
+      "name": "Status Stamps",
+      "kind": "chip",
+      "refersTo": "stamp-proof",
+      "description": "CURRENT outlined ink; ACCEPTED and PUBLISHED solid signal blue.",
+      "html": "<span class=\"ds-stamp ds-stamp-cur\">Current</span> <span class=\"ds-stamp ds-stamp-proof\">Accepted</span> <span class=\"ds-stamp ds-stamp-proof\">Published</span>",
+      "css": ".ds-stamp{display:inline-flex;align-items:center;gap:.375rem;height:1.375rem;padding:0 .4375rem;font-family:Archivo,ui-sans-serif,system-ui,sans-serif;font-size:.6875rem;font-weight:650;font-variation-settings:'wdth' 80;letter-spacing:.07em;text-transform:uppercase;line-height:1}.ds-stamp-cur{border:1px solid var(--ink,#111318);color:var(--ink,#111318)}.ds-stamp-cur::before{content:'';width:.375rem;height:.375rem;background:var(--ink,#111318)}.ds-stamp-proof{background:var(--signal,#0b57d0);color:#fff}"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Technology tag under message detail; grey-ruled, stateless.",
+      "html": "<ul class=\"ds-tags\"><li class=\"ds-tag\">Kubernetes</li><li class=\"ds-tag\">Go</li><li class=\"ds-tag\">Python</li></ul>",
+      "css": ".ds-tags{display:flex;flex-wrap:wrap;gap:.375rem;list-style:none;margin:0;padding:0}.ds-tag{padding:.0625rem .5rem;border:1px solid var(--rule,#c4cad3);background:var(--paper,#fff);color:var(--ink-2,#434955);font-family:Archivo,ui-sans-serif,system-ui,sans-serif;font-size:.8125rem;font-variation-settings:'wdth' 88}"
+    },
+    {
+      "name": "Response Arrow",
+      "kind": "custom",
+      "refersTo": "link-evidence",
+      "description": "Dashed signal-blue reply running back to INDUSTRY above the final actions.",
+      "html": "<div class=\"ds-reply\"></div>",
+      "css": ".ds-reply{position:relative;height:11px;margin:1.25rem 0;max-width:36rem}.ds-reply::before{content:'';position:absolute;top:5px;left:0;right:0;border-top:2px dashed var(--signal,#0b57d0)}.ds-reply::after{content:'';position:absolute;left:-2px;top:0;width:10px;height:10px;border-left:2px solid var(--signal,#0b57d0);border-bottom:2px solid var(--signal,#0b57d0);transform:translateY(1px) rotate(45deg)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Call-Flow Ladder",
+    "overview": "The page is one sequence diagram drawn on a white specification sheet. Three lifelines (INDUSTRY, YOONJAE HWANG, RESEARCH) drop from participant boxes in the sticky header and run the full height of the page; every role, project and paper is a numbered message whose arrow travels from the centre lifeline to the lane it belongs to. Independent projects are self-messages that loop out of the centre line and back. Time flows down. Everything else on the page is diagram furniture: dog-eared note boxes, activation bars, status stamps, a dashed return arrow.\n\nThe material is a spec document, not a screen: white paper, near-black ink, hairline grey rules, square corners, no shadows. A single signal blue is rationed to meaning: the primary action, the two proofs of published work, and the dashed response arrow. Type is one variable family, Archivo, used across its width axis: expanded and heavy for the name, condensed for message labels and diagram labels, tabular numerals wherever numbers align.\n\nDensity is reading density. Detail copy sits at 15px in a muted ink, capped near 70ch, beneath condensed message titles that scan quickly down two lanes.",
+    "keyCharacteristics": [
+      "Three full-height hairline lifelines on a five-column lane grid; one lifeline on narrow screens.",
+      "Solid request arrows with filled heads; one stroke-draw motion as each message enters view.",
+      "Square, 1px-ink-bordered boxes everywhere; depth is never simulated.",
+      "One accent, signal blue, carries meaning only.",
+      "One variable typeface; width, not family, distinguishes roles."
+    ],
+    "rules": [
+      {
+        "name": "The Meaning-Only Blue Rule",
+        "body": "Signal blue marks the action, the proof, or the reply; nothing decorative is ever blue. A message turns blue only when its status is ACCEPTED or PUBLISHED.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Box Rule",
+        "body": "Diagram objects (participants, notes, activation bars, buttons, stamps, badges) are outlined in 1px Drafting Ink; secondary objects (tags, interests) drop to Lifeline Grey.",
+        "section": "colors"
+      },
+      {
+        "name": "The Width-Not-Family Rule",
+        "body": "Roles are separated by the wdth axis and weight, never by a second typeface. Expanded is for the name and headings; condensed is for labels, messages and stamps.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Count Rule",
+        "body": "Message numbers, periods and years use tabular numerals so dates align down the ladder.",
+        "section": "typography"
+      },
+      {
+        "name": "The Drawn-Not-Lifted Rule",
+        "body": "Nothing floats. If an object needs emphasis, it gets an ink border, an ink fill, or the signal blue, never a shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do place every career item on the ladder as a numbered message routed to its lane; independent projects loop back to the centre lifeline.",
+      "Do keep signal blue to the primary action, ACCEPTED and PUBLISHED proofs, evidence links and the dashed response arrow.",
+      "Do outline diagram objects in 1px Drafting Ink with square corners.",
+      "Do distinguish type roles by Archivo's width and weight axes, with tabular numerals for dates and counts.",
+      "Do draw each message arrow once as it enters view (700ms, cubic-bezier(0.16, 1, 0.3, 1)) with text always visible, and show arrows static under reduced motion.",
+      "Do collapse to a single lifeline under 760px and end every arrow on a receiving box naming its lane."
+    ],
+    "donts": [
+      "Don't add box-shadows, rounded corners or decorative gradients to boxes; depth is drawn, not lifted.",
+      "Don't use blue for decoration, hover tints of neutral elements, or non-proof statuses.",
+      "Don't introduce a second typeface or a monospace label style.",
+      "Don't stack the career as a single-column card list; it lives on the lanes."
+    ]
+  }
+}
