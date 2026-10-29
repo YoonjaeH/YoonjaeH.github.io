@@ -301,19 +301,6 @@ a {
   font-variation-settings: 'wdth' 96;
   color: var(--ink);
 }
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.125rem 0.5rem;
-  border: 1px solid var(--ink);
-  font-size: 0.75rem;
-  font-weight: 600;
-  font-variation-settings: 'wdth' 82;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  background: var(--paper);
-}
 .hero__summary {
   margin-top: 1.125rem;
   max-width: 60ch;
@@ -833,31 +820,11 @@ a {
 
 /* ---------- Notes after the flow ---------- */
 
-.over-research {
-  grid-column: 4 / 6;
-  margin-top: 4rem;
-  margin-right: calc(var(--edge) / 2 - 1.25rem);
-  margin-left: 1.25rem;
-  padding: 1.5rem 1.75rem;
-}
-.over-research h2,
 .ies h2 {
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0.875rem;
 }
-.interests {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.375rem 0.5rem;
-}
-.interests li {
-  padding: 0.1875rem 0.625rem;
-  border: 1px solid var(--rule);
-  background: var(--paper);
-  font-size: 0.9375rem;
-}
-
 .ies {
   grid-column: 2 / 5;
   margin-top: 4rem;
@@ -1179,10 +1146,6 @@ a {
   }
   .msg__act {
     display: none;
-  }
-  .over-research {
-    grid-column: 1 / -1;
-    margin: 2.5rem 0 0;
   }
   .ies th {
     width: auto;

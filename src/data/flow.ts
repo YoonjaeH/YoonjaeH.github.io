@@ -47,19 +47,6 @@ export const messages: Message[] = [
     ],
   },
   {
-    id: 'sim2real',
-    lane: 'research',
-    org: 'University of Southern California — Independent Research',
-    role: 'Sim-to-Real Transfer',
-    period: 'May 2025 — Present',
-    short: '2025–',
-    status: 'current',
-    bullets: [
-      'Designed an end-to-end sim-to-real transfer pipeline using ManiSkill3, generating large-scale synthetic demonstration datasets via motion planning and RL.',
-      'Trained manipulation policies (PPO/SAC) on a V100 GPU cluster and systematically benchmarked against real-world demonstrations to quantify the sim-to-real gap.',
-    ],
-  },
-  {
     id: 'log-analyzer',
     lane: 'self',
     org: 'Log Analyzer',
@@ -75,9 +62,8 @@ export const messages: Message[] = [
     lane: 'research',
     org: 'Autonomous Networks Research Group — USC',
     role: 'Graduate Researcher',
-    period: 'Oct 2025 — Present',
-    short: '2025–',
-    status: 'current',
+    period: 'Oct 2025 — Aug 2026',
+    short: '2025–26',
     bullets: [
       'Architecting a scalable Python-based simulation framework to model DAG-based computational workflows across heterogeneous distributed nodes.',
       'Implementing performance profiling for mobility-aware scheduling scenarios to quantify execution overhead on O-RAN edge infrastructure.',
@@ -101,12 +87,23 @@ export const messages: Message[] = [
     lane: 'research',
     org: 'Robotics Embedded Systems Lab — USC',
     role: 'Graduate Researcher',
-    period: 'Feb 2026 — Present',
-    short: '2026–',
-    status: 'current',
+    period: 'Feb 2026 — Sep 2026',
+    short: '2026',
     bullets: [
       'Researching Distributed Sequential Greedy Assignment (DSGA) frameworks for online mapping and coordinated multi-robot task allocation.',
       'Investigating matroid-constrained submodular maximization to achieve provable approximation guarantees for autonomous agent coordination at scale.',
+    ],
+  },
+  {
+    id: 'sim2real',
+    lane: 'research',
+    org: 'University of Southern California — Independent Research',
+    role: 'Sim-to-Real Transfer',
+    period: 'May 2026 — Aug 2026',
+    short: '2026',
+    bullets: [
+      'Designed an end-to-end sim-to-real transfer pipeline using ManiSkill3, generating large-scale synthetic demonstration datasets via motion planning and RL.',
+      'Trained manipulation policies (PPO/SAC) on a V100 GPU cluster and systematically benchmarked against real-world demonstrations to quantify the sim-to-real gap.',
     ],
   },
   {
@@ -120,6 +117,20 @@ export const messages: Message[] = [
     authors: 'Yoonjae H.',
     venue: 'ICCCN 2026',
     year: '2026',
+  },
+  {
+    id: 'asm',
+    lane: 'industry',
+    org: 'ASM',
+    role: 'Forward Deployed Engineer, Product Intelligence',
+    period: 'Sep 2026 — Present',
+    short: '2026–',
+    status: 'current',
+    bullets: [
+      'Analyzing and structuring semiconductor process and product data with customers and internal teams to support process control, monitoring, and optimization.',
+      'Applying statistical analysis, predictive modeling, and machine learning to benchmark and improve model performance across semiconductor use cases.',
+      'Building tools and workflows for product intelligence, and delivering demonstrations and recommendations to technical and non-technical stakeholders.',
+    ],
   },
 ];
 
@@ -145,4 +156,5 @@ export const indexLabel: Record<string, string> = {
   'dag-profiler': 'DAG Profiler',
   resl: 'Robotics Embedded Systems Lab',
   icccn: 'ICCCN 2026 paper',
+  asm: 'ASM · Product Intelligence',
 };
