@@ -812,6 +812,11 @@ a {
   height: 0.375rem;
   background: var(--ink);
 }
+.stamp--submitted {
+  border: 1px solid var(--signal);
+  color: var(--signal-deep);
+  background: var(--paper);
+}
 .stamp--accepted,
 .stamp--published {
   background: var(--signal);

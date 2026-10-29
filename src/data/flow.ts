@@ -1,7 +1,7 @@
 // Every role, project and paper is one message in the call flow, oldest first.
 // lane: who receives the message. 'self' is an independent project (a self-message).
 export type Lane = 'industry' | 'research' | 'self';
-export type Status = 'current' | 'accepted' | 'published';
+export type Status = 'current' | 'submitted' | 'accepted' | 'published';
 
 export interface Message {
   id: string;
@@ -113,10 +113,11 @@ export const messages: Message[] = [
     role: 'Publication',
     period: '2026',
     short: 'ICCCN 2026',
-    status: 'accepted',
+    status: 'published',
     authors: 'Yoonjae H.',
     venue: 'ICCCN 2026',
     year: '2026',
+    link: { href: 'https://ieeexplore.ieee.org/document/11663017', label: 'View on IEEE Xplore' },
   },
   {
     id: 'asm',
@@ -132,6 +133,19 @@ export const messages: Message[] = [
       'Building tools and workflows for product intelligence, and delivering demonstrations and recommendations to technical and non-technical stakeholders.',
     ],
   },
+  {
+    id: 'icra',
+    lane: 'research',
+    org: 'Failure-Resilient Multi-Robot Coordination with k-Connectivity Constrained Submodular Maximization',
+    role: 'Publication',
+    period: '2026',
+    short: 'ICRA 2026',
+    status: 'submitted',
+    authors: 'Yoonjae H.',
+    venue: 'Submitted to ICRA 2026',
+    year: '2026',
+    link: { href: 'https://arxiv.org/abs/2610.13049', label: 'Read on arXiv' },
+  },
 ];
 
 export const laneName: Record<Lane, string> = {
@@ -142,6 +156,7 @@ export const laneName: Record<Lane, string> = {
 
 export const statusName: Record<Status, string> = {
   current: 'Current',
+  submitted: 'Submitted',
   accepted: 'Accepted',
   published: 'Published',
 };
@@ -157,4 +172,5 @@ export const indexLabel: Record<string, string> = {
   resl: 'Robotics Embedded Systems Lab',
   icccn: 'ICCCN 2026 paper',
   asm: 'ASM · Product Intelligence',
+  icra: 'ICRA 2026 submission',
 };
