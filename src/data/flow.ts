@@ -22,6 +22,18 @@ export interface Message {
 
 export const messages: Message[] = [
   {
+    id: 'braun',
+    lane: 'research',
+    org: 'Braun Group, Materials Science and Engineering — UIUC',
+    role: 'High-Energy, Dendrite-Free Micro-Batteries',
+    period: 'Aug 2021 — May 2022',
+    short: '2021–22',
+    bullets: [
+      'Developed a high-energy micro-battery (300 μm) with a silicon foam anode to overcome the volumetric expansion and low-density limits of conventional materials, reaching 30% higher energy density than the graphite-anode baseline.',
+      'Demonstrated stable cycling with suppressed dendrite formation, retaining 95% of initial capacity after charge/discharge cycles, validated through potentiostatic analysis.',
+    ],
+  },
+  {
     id: 'samsung',
     lane: 'industry',
     org: 'Samsung Electronics',
@@ -114,7 +126,7 @@ export const messages: Message[] = [
     period: '2026',
     short: 'ICCCN 2026',
     status: 'published',
-    authors: 'Yoonjae H.',
+    authors: 'Y. Hwang and B. Krishnamachari',
     venue: 'ICCCN 2026',
     year: '2026',
     link: { href: 'https://ieeexplore.ieee.org/document/11663017', label: 'View on IEEE Xplore' },
@@ -141,7 +153,7 @@ export const messages: Message[] = [
     period: '2026',
     short: 'ICRA 2026',
     status: 'submitted',
-    authors: 'Yoonjae H.',
+    authors: 'Y. Hwang, H. Kim, E. Novoseller, G. Shi and G. S. Sukhatme',
     venue: 'Submitted to ICRA 2026',
     year: '2026',
     link: { href: 'https://arxiv.org/abs/2610.13049', label: 'Read on arXiv' },
@@ -163,6 +175,7 @@ export const statusName: Record<Status, string> = {
 
 // Short label used in the hero index.
 export const indexLabel: Record<string, string> = {
+  braun: 'Braun Group · micro-batteries',
   samsung: 'Samsung Electronics',
   ericsson: 'Ericsson · 5G core',
   sim2real: 'Sim-to-real transfer',

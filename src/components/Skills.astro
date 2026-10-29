@@ -1,12 +1,34 @@
 ---
-const skillGroups = [
+const skillSets = [
   {
-    label: 'Languages & Tools',
-    skills: ['Python', 'C++', 'Go', 'Erlang', 'TypeScript', 'PyTorch', 'React', 'Next.js', 'SQL', 'Bash'],
+    title: 'Software',
+    groups: [
+      {
+        label: 'Languages & Tools',
+        skills: ['Python', 'C++', 'Go', 'Erlang', 'TypeScript', 'PyTorch', 'React', 'Next.js', 'SQL', 'Bash'],
+      },
+      {
+        label: 'Cloud & Infrastructure',
+        skills: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'Git / GitHub', 'RabbitMQ', 'REST API'],
+      },
+    ],
   },
   {
-    label: 'Cloud & Infrastructure',
-    skills: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'Git / GitHub', 'RabbitMQ', 'REST API'],
+    title: 'Microfabrication & Microstructure Analysis',
+    groups: [
+      {
+        label: 'Fabrication',
+        skills: ['Oxidation', 'Photolithography', 'Etching', 'Cleanroom', 'Glovebox'],
+      },
+      {
+        label: 'Characterization',
+        skills: ['SEM', 'Optical Microscopy', 'Raman Spectroscopy', 'EIS', 'Potentiostat', 'DSC', 'LVDT'],
+      },
+      {
+        label: 'Materials Simulation',
+        skills: ['OOF2', 'LAMMPS', 'Quantum ESPRESSO'],
+      },
+    ],
   },
 ];
 ---
@@ -14,19 +36,24 @@ const skillGroups = [
 <section class="ies note" id="skills" aria-labelledby="skills-title">
   <h2 id="skills-title">Technical Skills</h2>
   <table>
-    <tbody>
-      {
-        skillGroups.map((group) => (
-          <tr>
-            <th scope="row">{group.label}</th>
-            <td>
-              {group.skills.map((skill) => (
-                <span>{skill}</span>
-              ))}
-            </td>
+    {
+      skillSets.map((set) => (
+        <tbody>
+          <tr class="ies__set">
+            <th colspan="2" scope="rowgroup">{set.title}</th>
           </tr>
-        ))
-      }
-    </tbody>
+          {set.groups.map((group) => (
+            <tr>
+              <th scope="row">{group.label}</th>
+              <td>
+                {group.skills.map((skill) => (
+                  <span>{skill}</span>
+                ))}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      ))
+    }
   </table>
 </section>

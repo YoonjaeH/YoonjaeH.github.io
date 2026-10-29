@@ -15,7 +15,7 @@ Secondary: academic readers (faculty, lab PIs, research collaborators) checking 
 A personal portfolio for Yoonjae Hwang, a USC MS Computer Science student with two years of production software engineering at Ericsson (5G core) and current graduate research in distributed systems and multi-agent robotics.
 
 Success means a visitor does one or more of:
-- downloads the CV (`/Yoonjae_Hwang_CV.pdf`);
+- downloads the CV (`/Yoonjae_Hwang_Resume.pdf`);
 - emails (yoonjae@usc.edu);
 - opens the actual work: the ICCCN 2026 paper, the `dagprofiler` PyPI package, or GitHub.
 
@@ -42,7 +42,7 @@ An engineer who has shipped carrier-grade production software (Ericsson 5G core 
 - Voice in existing copy: factual, metric-backed résumé language (percentages, counts, named customers and tools). No self-description beyond credentials.
 
 ## Evidence on Hand
-- CV PDF: `public/Yoonjae_Hwang_CV.pdf`.
+- CV PDF: `public/Yoonjae_Hwang_Resume.pdf`.
 - Publication: "Profiling and Scheduling Complex O-RAN Applications Across the 5G Edge and Cloud", ICCCN 2026, status Accepted. No DOI or link yet.
 - Open-source: `dagprofiler` on PyPI (https://pypi.org/project/dagprofiler/).
 - Project without a public link: Log Analyzer (Go / Celery / RabbitMQ / Next.js).

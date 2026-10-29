@@ -860,6 +860,20 @@ a {
   content: ' · ';
   color: var(--rule);
 }
+.ies .ies__set th {
+  width: auto;
+  padding: 1.75rem 0 0.5rem;
+  border: 0;
+  font-size: 0.6875rem;
+  font-weight: 650;
+  font-variation-settings: 'wdth' 80;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.ies tbody:first-child .ies__set th {
+  padding-top: 0;
+}
 
 /* ---------- Response: the dashed return arrow ---------- */
 
@@ -1170,6 +1184,13 @@ a {
   }
   .ies tr + tr {
     margin-top: 0.75rem;
+  }
+  .ies tr.ies__set {
+    border: 0;
+    padding: 0;
+  }
+  .ies .ies__set th {
+    padding-bottom: 0.25rem;
   }
   .response {
     grid-column: 1 / -1;
